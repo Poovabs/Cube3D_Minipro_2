@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rubik's Cube</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #222;
+      font-family: sans-serif;
+    }
+
+    #ui {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+
+    button {
+      background: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-right: 10px;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      background: #eee;
+    }
+
+    button:active {
+      transform: translateY(1px);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="ui">
+    <button id="btn-scramble">Scramble</button>
+    <button id="btn-reset">Reset</button>
+  </div>
+  <!-- Import map for Three.js -->
+  <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
